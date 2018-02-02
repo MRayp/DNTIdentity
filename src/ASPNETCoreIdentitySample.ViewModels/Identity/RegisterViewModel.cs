@@ -27,8 +27,6 @@ namespace ASPNETCoreIdentitySample.ViewModels.Identity
         public string LastName { get; set; }
 
         [Required(ErrorMessage = "(*)")]
-        [Remote("ValidateUsername", "Register",
-            AdditionalFields = nameof(Username) + "," + ViewModelConstants.AntiForgeryToken, HttpMethod = "POST")]
         [EmailAddress(ErrorMessage = "لطفا آدرس ایمیل معتبری را وارد نمائید.")]
         [Display(Name = "ایمیل")]
         public string Email { get; set; }
